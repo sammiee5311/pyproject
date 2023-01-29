@@ -1,0 +1,17 @@
+{
+    "project_name": "pyproject",
+    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "project_with_underscore": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
+    "open_source_license": [
+        "MIT license",
+        "ISC license",
+        "Apache Software License 2.0",
+        "GNU General Public License v3",
+        "Not open source"
+    ],
+    "author_name": "author",
+    "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
+    "mypy": "y",
+    "black": "y",
+    "isort": "y"
+}

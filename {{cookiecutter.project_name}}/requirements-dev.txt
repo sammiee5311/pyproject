@@ -1,0 +1,12 @@
+pytest
+pytest-cov
+pytest-env
+{% if cookiecutter.black|lower == 'y' -%}
+black
+{% endif %}
+{% if cookiecutter.mypy|lower == 'y' -%}
+mypy
+{% endif %}
+{% if cookiecutter.isort|lower == 'y' -%}
+isort
+{% endif %}
