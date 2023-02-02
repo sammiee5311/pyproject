@@ -6,6 +6,7 @@ pyproject with python 3.10 version
 - project_name
 - project_slug
 - project_with_underscore
+- project_description
 - open_source_license
     - MIT license
     - ISC license
