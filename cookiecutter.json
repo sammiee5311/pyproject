@@ -14,5 +14,6 @@
     "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
     "mypy": "y",
     "black": "y",
-    "isort": "y"
+    "isort": "y",
+    "github_actions": "y"
 }

@@ -10,7 +10,10 @@ def remove(filepath):
 
 
 if "{{ cookiecutter.open_source_license }}" == "Not open source":
-    remove(os.path.join(os.getcwd(), "{{cookiecutter.project_slug}}", "LICENSE"))
+    remove(os.path.join(os.getcwd(), "{{ cookiecutter.project_slug }}", "LICENSE"))
+
+if "{{ cookiecutter.github_actions }}" == "n":
+    remove(os.path.join(os.getcwd(), "{{ cookiecutter.project_slug }}", ".github"))
 
 
 print("Generated files from cookiecutter.")

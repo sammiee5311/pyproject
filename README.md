@@ -18,3 +18,4 @@ pyproject with python 3.10 version
 - mypy
 - black
 - isort
+- github_actions
