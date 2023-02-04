@@ -15,5 +15,8 @@ if "{{ cookiecutter.open_source_license }}" == "Not open source":
 if "{{ cookiecutter.github_actions }}" == "n":
     remove(os.path.join(os.getcwd(), "{{ cookiecutter.project_slug }}", ".github"))
 
+if "{{ cookiecutter.github_actions }}" == "n":
+    remove(os.path.join(os.getcwd(), "{{ cookiecutter.project_slug }}", "tox.ini"))
+
 
 print("Generated files from cookiecutter.")

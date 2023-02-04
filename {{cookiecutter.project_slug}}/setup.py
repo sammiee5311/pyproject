@@ -2,6 +2,8 @@ from setuptools import find_packages, setup
 
 dev_requires = [
     "pytest",
+    "pytest-cov"
+    "pytest-env",
     {% if cookiecutter.black|lower == 'y' -%}
     "black",
     {% endif -%}
@@ -10,6 +12,9 @@ dev_requires = [
     {% endif -%}
     {%- if cookiecutter.isort|lower == 'y' -%}
     "isort",
+    {% endif -%}
+    {%- if cookiecutter.tox|lower == 'y' -%}
+    "tox",
     {% endif -%}
 ]
 

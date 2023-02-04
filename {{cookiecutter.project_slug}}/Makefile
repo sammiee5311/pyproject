@@ -14,7 +14,7 @@ create-env:
 install-env:
 ifeq ($(OSTYPE), Windows_NT)
 	( \
-		./venv/bin/activate; \
+		./venv/Scripts/activate; \
 		$(PIP) install -r requirements.txt; \
 	)
 else ifeq ($(UNAME), Linux)
@@ -32,18 +32,18 @@ endif
 install-dev-env:
 ifeq ($(OSTYPE), Windows_NT)
 	( \
-		./venv/bin/activate; \
-		$(PIP) install -r requirements-dev.txt; \
+		./venv/Scripts/activate; \
+		$(PIP) install -r requirements_dev.txt; \
 	)
 else ifeq ($(UNAME), Linux)
 	( \
 		. venv/bin/activate; \
-		$(PIP) install -r requirements-dev.txt; \
+		$(PIP) install -r requirements_dev.txt; \
 	)
 else
 	( \
 		source venv/bin/activate; \
-		$(PIP) install -r requirements-dev.txt; \
+		$(PIP) install -r requirements_dev.txt; \
 	)
 endif
 
@@ -51,10 +51,10 @@ setup-dev-{{ cookiecutter.project_slug }}: create-env install-dev-env
 
 setup-{{ cookiecutter.project_slug }}: create-env install-env
 
-test-{{ cookiecutter.project_slug }}:
+test-ci-{{ cookiecutter.project_slug }}:
 ifeq ($(OSTYPE), Windows_NT)
 	( \
-		./venv/bin/activate; \
+		./venv/Scripts/activate; \
 		pytest; \
 	)
 else ifeq ($(UNAME), Linux)
@@ -66,5 +66,23 @@ else
 	( \
 		source venv/bin/activate; \
 		pytest; \
+	)
+endif
+
+test-{{ cookiecutter.project_slug }}:
+ifeq ($(OSTYPE), Windows_NT)
+	( \
+		./venv/Scripts/activate; \
+		tox; \
+	)
+else ifeq ($(UNAME), Linux)
+	( \
+		. venv/bin/activate; \
+		tox; \
+	)
+else
+	( \
+		source venv/bin/activate; \
+		tox; \
 	)
 endif

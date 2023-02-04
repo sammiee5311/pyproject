@@ -15,5 +15,6 @@
     "mypy": "y",
     "black": "y",
     "isort": "y",
-    "github_actions": "y"
+    "github_actions": "y",
+    "tox": "y"
 }

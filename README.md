@@ -19,3 +19,4 @@ pyproject with python 3.10 version
 - black
 - isort
 - github_actions
+- tox
