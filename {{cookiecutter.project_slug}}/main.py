@@ -1,5 +1,7 @@
+from utils.log import logger
+
 def main() -> None:
-    pass
+    logger.info("Completed cookiecutter.")
 
 if __name__ == "__main__":
     main()
