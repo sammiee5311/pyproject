@@ -1,6 +1,10 @@
 # Python Project Template with CookiCutter
 
-pyproject with python 3.10 version
+pyproject with python >= 3.8 version
+
+# How to use
+- Install `cookiecutter`
+- Use following command `cookiecutter https://github.com/sammiee5311/pyproject`
 
 # Config
 - project_name
