@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 dev_requires = [
     "pytest",
-    "pytest-cov"
+    "pytest-cov",
     "pytest-env",
     {% if cookiecutter.black|lower == 'y' -%}
     "black",
